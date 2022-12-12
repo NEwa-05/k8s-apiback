@@ -1,0 +1,15 @@
+## JWT
+#---
+#apiVersion: traefik.containo.us/v1alpha1
+#kind: Middleware
+#metadata:
+#  name: jwt-auth
+#  namespace: apiback
+#spec:
+#  plugin:
+#    jwtAuth:
+#      source: jwtSource
+#      forwardHeaders:
+#        X-Traefik-Group: roles
+#        X-Traefik-User: username
+#      claims: Contains(`groups`, `admin`)
