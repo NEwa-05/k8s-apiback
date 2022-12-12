@@ -3,7 +3,7 @@
 #apiVersion: traefik.containo.us/v1alpha1
 #kind: Middleware
 #metadata:
-#  name: jwt-auth
+#  name: jwt-auth-admin
 #  namespace: apiback
 #spec:
 #  plugin:

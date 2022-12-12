@@ -2,14 +2,14 @@
 #apiVersion: traefik.containo.us/v1alpha1
 #kind: IngressRoute
 #metadata:
-#  name: apiback-tls
+#  name: apiback-auth-tls
 #  namespace: apiback
 #spec:
 #  entryPoints:
 #    - websecure
 #  routes:
 #    - kind: Rule
-#      match: Host(`apiback.apidays.demo.traefiklabs.tech`) && Path(`/api`) && Method(`POST`)
+#      match: Host(`apiback.apidays.demo.traefiklabs.tech`) && Path(`/newline`) && Method(`POST`)
 #      services:
 #        - name: apiback-v1
 #          port: 80
