@@ -1,15 +1,15 @@
-# JWT
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: jwt-auth-admin
-  namespace: apiback
-spec:
-  plugin:
-    jwtAuth:
-      source: jwtSource
-      forwardHeaders:
-        X-Traefik-Group: roles
-        X-Traefik-User: username
-      claims: Contains(`roles`, `admin`)
+## JWT
+#---
+#apiVersion: traefik.containo.us/v1alpha1
+#kind: Middleware
+#metadata:
+#  name: jwt-auth-admin
+#  namespace: apiback
+#spec:
+#  plugin:
+#    jwtAuth:
+#      source: jwtSource
+#      forwardHeaders:
+#        X-Traefik-Group: roles
+#        X-Traefik-User: username
+#      claims: Contains(`roles`, `admin`)
