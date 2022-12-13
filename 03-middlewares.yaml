@@ -1,3 +1,16 @@
+# Distributed Rate limiting
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: rate-limit
+  namespace: apiback
+spec:
+  plugin:
+    rateLimit:
+      average: 2 # default 0
+      period: 1s # default 1s
+      burst: 10 # default 1
 
 # JWT
 ---

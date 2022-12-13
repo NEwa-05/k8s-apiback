@@ -9,6 +9,26 @@ spec:
     - websecure
   routes:
     - kind: Rule
+      match: Host(`apiback.apidays.demo.traefiklabs.tech`) && Path (`/newlines`)
+      services:
+        - name: apiback-v1
+          port: 80
+      middlewares:
+        - name: rate-limit
+  tls:
+    certResolver: default
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: apiback-tls
+  namespace: apiback
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
       match: Host(`apiback.apidays.demo.traefiklabs.tech`)
       services:
         - name: apiback-v1
@@ -17,3 +37,5 @@ spec:
       #  - name: jwt-auth
   tls:
     certResolver: default
+
+
