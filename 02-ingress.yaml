@@ -14,7 +14,7 @@ spec:
         - name: apiback-v1
           port: 80
       middlewares:
-        - name: rate-limit
+      #  - name: rate-limit
   tls:
     certResolver: default
 
@@ -34,7 +34,7 @@ spec:
         - name: apiback-v1
           port: 80
       middlewares:
-        - name: jwt-auth
+      #  - name: jwt-auth
   tls:
     certResolver: default
 
