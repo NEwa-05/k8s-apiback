@@ -9,7 +9,7 @@
 #    - websecure
 #  routes:
 #    - kind: Rule
-#      match: Host(`apiback.stdrw12.demo.traefiklabs.tech`) && Path(`/newline`) && Method(`POST`)
+#      match: Host(`apiback.hsbw12.demo.traefiklabs.tech`) && Path(`/newline`) && Method(`POST`)
 #      services:
 #        - name: apiback-v1
 #          port: 80
