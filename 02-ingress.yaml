@@ -9,7 +9,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`apiback.olgw12.demo.traefiklabs.tech`) && Path (`/newlines`)
+      match: Host(`apiback.adentow13.demo.traefiklabs.tech`) && Path (`/newlines`)
       services:
         - name: apiback-v1
           port: 80
@@ -29,12 +29,12 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`apiback.olgw12.demo.traefiklabs.tech`)
+      match: Host(`apiback.adentow13.demo.traefiklabs.tech`)
       services:
         - name: apiback-v1
           port: 80
       middlewares:
-        - name: jwt-auth
+      #  - name: jwt-auth
   tls:
     certResolver: default
 
