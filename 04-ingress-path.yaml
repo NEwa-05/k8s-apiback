@@ -16,4 +16,4 @@
 #      middlewares:
 #        - name: jwt-auth-admin
 #  tls:
-#    certResolver: default
+#    certResolver: letsencrypt

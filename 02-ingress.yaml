@@ -16,7 +16,7 @@ spec:
       middlewares:
       #  - name: rate-limit
   tls:
-    certResolver: default
+    certResolver: letsencrypt
 
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -36,6 +36,6 @@ spec:
       middlewares:
       #  - name: jwt-auth
   tls:
-    certResolver: default
+    certResolver: letsencrypt
 
 
